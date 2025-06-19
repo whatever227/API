@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    
+    <link rel="stylesheet" href="Style_nav.css" />
+    <link rel="stylesheet" href="Style_page.css" />
+  </head>
+  <body>
+    
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://cdn.glitch.global/8de8de7c-5275-4964-955f-84484751a3f0/Logo.png?v=1750236193915"
+          alt="logo"
+          width="100"
+          height="100"
+        />
+      </div>
+
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="Index_employee.html" class="active">Home</a></li>
+          <li><a href="Employee.html">Employee</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    
+    <div class="page-content">
+      <h2>To Employees:</h2>
+      <p>
+        At EWL, we believe that every team member is a driving force behind the
+        movement towards a sustainable future. Our diverse community unites
+        materials scientists, environmental engineers, innovative designers, and
+        strategic visionaries, all bound by a shared mission: to end white
+        pollution and redefine the circular economy. Our team is at the
+        forefront of groundbreaking initiatives, from developing biodegradable
+        materials and pioneering recycling technologies to implementing
+        end-to-end solutions that tackle plastic waste at every stage. Here,
+        you'll collaborate with industry leaders on transformative
+        projects—whether it’s creating ocean-friendly packaging, designing
+        community recycling networks, optimizing biodegradable formulas in the
+        lab, or spearheading global plastic reduction campaigns. We foster a
+        culture of openness and collaboration, providing each team member with
+        the resources and support to grow professionally and bring innovative
+        ideas to life. Whether you’re a tech expert coding eco-data platforms or
+        a storyteller advocating for sustainability, your unique skills and
+        perspectives are not only valued but empowered. Join us in turning our
+        passion for the planet into meaningful action, and together, let’s write
+        the next chapter of a world free from white pollution.
+      </p>
+    </div>
+    <script>
+      
+      const links = document.querySelectorAll(".nav-links a");
+      links.forEach((link) => {
+        link.addEventListener("click", function () {
+       
+          links.forEach((l) => l.classList.remove("active"));
+         
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

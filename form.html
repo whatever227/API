@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <link rel="stylesheet" href="Style_form.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+    </script>
+
+    <script>
+      function SubForm(event) {
+        event.preventDefault(); 
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/NX4CQbXC57u8q8yT/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Form Data Submitted :)");
+            window.location.href = "Index_new.html"; 
+          },
+          error: function (xhr, status, error) {
+            alert("There was an error: " + error);
+          },
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <form action="result.html" method="GET" id="myForm">
+      <div>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id="first_name" required />
+      </div>
+
+      <div>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" id="last_name" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="XXX@outlook.com"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="phone">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="123-456-7890"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="1" max="200" required />
+      </div>
+
+      <div>
+        <label for="date">Birthdate</label>
+        <input type="date" name="date" id="date" required />
+      </div>
+
+      <div>
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" required />
+      </div>
+
+      <div>
+        <label for="position">Position Apply to</label>
+        <input type="text" name="position" id="position" required />
+      </div>
+
+      <div>
+        Are you presently employed?
+        <br />
+        <label for="employment_yes">yes</label>
+        <input type="radio" name="employment" id="employment_yes" value="yes"/>
+        <br/>
+        <label for="employment_no">no</label>
+        <input type="radio" name="employment" id="employment_no" value="no"/>
+        <br/>
+        If employed, date of
+        <label for="availability">availability:</label>
+        <input type="date" name="availability" id="availability" />
+      </div>
+
+      <div>
+        Have you ever worked for us before?
+        <br/>
+        <label for="past_yes">yes</label>
+        <input type="radio" name="past" id="past_yes" value="yes" />
+        <br/>
+        <label for="past_no">no</label>
+        <input type="radio" name="past" id="past_no" value="no"/>
+        <br/>
+        if so, what position?
+        <input type="text" name="past_position" id="past_position" />
+      </div>
+
+      <div>
+        Have you ever been convicted of a criminal offense for which you have not been pardoned?
+        <br />
+        <label for="criminal_record_yes">yes</label>
+        <input type="radio" name="criminal_record" id="criminal_record_yes" value="yes"/>
+        <br/>
+        <label for="criminal_record_no">no</label>
+        <input type="radio" name="criminal_record" id="criminal_record_no" value="no"/>
+      </div>
+
+      <div>
+        Are you legally entitled to work in Canada?
+        <br />
+        *you may be required to provide proof of employment status prior to hire.
+		  <br/>
+        <label for="legal_yes">yes</label>
+        <input type="radio" name="legal_to_work" id="legal_yes" value="yes"/>
+        <br/>
+        <label for="legal_no">no</label>
+        <input type="radio" name="legal_to_work" id="legal_no" value="no" />
+      </div>
+
+      <div>
+        <label for="interview_date">Please choose a proper date for your interview:</label>
+        <input type="date" name="interview_date" id="interview_date" />
+      </div>
+
+      <div>
+        <label for="interview_time">Please choose a proper time for your interview:</label>
+        <input type="time" name="interview_time" id="interview_time" />
+      </div>
+
+      <div>
+        <label for="message">Is there anything you want us to know? Leave us a message:</label>
+        <input type="text" name="message" id="message" placeholder="Anything!" />
+      </div>
+
+      <br />
+
+      <button onclick="reset()">Reset</button>
+      <button type="submit">Submit</button> 
+    </form>
+
+    <script>
+      
+      const form = document.getElementById('myForm');
+      form.addEventListener('submit', SubForm);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 320px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        .modal-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .employee-btn {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .new-btn {
+            background-color: #f5a623;
+            color: white;
+        }
+        .employee-btn:hover, .new-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Welcome to EcoWhite Lab!</h1>
+        <p>Come and join us to help with the Earth!</p>
+        
+    </div>
+
+    
+    <div class="modal-overlay" id="identify">
+        <div class="modal-content">
+            <div class="modal-title">Please select</div>
+            <button class="option-btn employee-btn" id="employeeBtn">I'am a employee</button>
+            <button class="option-btn new-btn" id="newBtn">I'am new.</button>
+        </div>
+    </div>
+
+    <script>
+        
+        const modal = document.getElementById('identify');
+        const employeeBtn = document.getElementById('employeeBtn');
+        const newBtn = document.getElementById('newBtn');
+
+        
+        window.addEventListener('load', function() {
+            modal.style.display = 'flex';
+        });
+
+        
+        employeeBtn.addEventListener('click', function() {
+            
+            window.location.href ="Index_employee.html";
+        });
+
+        document.getElementById('newBtn').addEventListener('click', function() {
+            
+            window.location.href = 'Index_new.html';
+        });
+      
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

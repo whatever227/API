@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+p {
+  margin: 20px auto;
+  padding: 50px;
+  font-family: "UICTFonTextStyle", sans-serif;
+  line-height: 1.8;
+  font-size: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  padding: 45px;
+  font-size: 22px;
+  color: darkblue;
+}

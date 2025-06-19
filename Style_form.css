@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+form {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #e6f7ff, #e0f2f1);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(33, 150, 243, 0.15);
+    border: 1px solid #bbdefb;
+}
+
+form h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4caf50;
+}
+
+
+form > div {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #33691e;
+    font-weight: 500;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #2196f3;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border-color: #0b7dda;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+
+form > div br + label {
+    display: inline;
+    margin-right: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+    accent-color: #4caf50;
+}
+
+
+button[type="submit"] {
+    padding: 14px 30px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+button[type="reset"] {
+    padding: 14px 30px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+button[type="reset"]:hover {
+    background-color: #1976d2;
+}
+
+
+.help-text {
+    color: #2196f3;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"],
+    textarea {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    button[type="submit"],
+    button[type="reset"] {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

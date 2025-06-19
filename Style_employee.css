@@ -1,0 +1,22 @@
+.odd {
+  display: inline;
+  padding: 15px;
+  background-color: #7bb8ee;
+  font-size: 15px;
+  list-style-type: decimal-leading-zero;
+  margin: 0px;
+  overflow: hidden;
+  float: left;
+  border-radius: 20%;
+}
+
+.even {
+  display: inline;
+  padding: 15px;
+  background-color: #7bb8ee;
+  font-size: 15px;
+  list-style-type: decimal-leading-zero;
+  margin: 0px;
+  float: right;
+  border-radius: 20%;
+}
